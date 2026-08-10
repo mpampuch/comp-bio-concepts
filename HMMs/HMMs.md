@@ -13,17 +13,30 @@ full Hidden Markov Models for gene finding. Each lecture has:
 > **How to use this set**
 >
 > - Work the math problems first; they make the code obvious.
-> - For the Julia problems, write the function _and_ a small test set
->   (`using Test`) before moving on. The expected answers in the math
->   problems double as your test oracles.
+> - For the Julia problems, implement the functions in the **interactive Pluto.jl notebooks** inside [`notebooks/`](file:///Users/markpampuch/Downloads/tmp/pHMMs/comp-bio-concepts/HMMs/notebooks).
+> - Each function starts in the **🔴 Red Phase** (`@stub "func"`), triggering live answer check boxes with yellow/red feedback.
+> - As you edit and complete each function, Pluto reactively updates the check box to the **🟢 Green Phase** (`correct()` alert box).
 > - Each lecture's code builds on the previous one. By Lecture 10 you will
 >   have a working gene-finding HMM assembled from pieces you wrote earlier.
-> - Suggested project layout:
+> - Project layout:
 >   ```
 >   SeqModel/
->     Project.toml          # add Test, (optionally) StatsBase, Plots
->     src/SeqModel.jl
->     test/runtests.jl
+>     Project.toml          # name + UUID, dependencies
+>     notebooks/            # Interactive Pluto.jl notebooks (Lectures 1-10)
+>       00_overview.jl
+>       01_dna_and_probability.jl
+>       02_markov_chains_and_cpg.jl
+>       03_hmms_and_viterbi.jl
+>       04_cpg_island_hmms.jl
+>       05_gene_finding_hmms.jl
+>     src/
+>       SeqModel.jl         # module: NotImplemented + @stub, includes, exports
+>       probability.jl      # L1–L3
+>       markov.jl           # L4–L5
+>       hmm.jl              # L6–L7 (defines the HMM struct)
+>       cpg_hmm.jl          # L8
+>       genes.jl            # L9–L10
+>     test/runtests.jl      # unit tests & notebook execution testset
 >   ```
 
 A handful of problems are marked **(★ stretch)** — they go a little beyond the

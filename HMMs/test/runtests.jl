@@ -175,4 +175,17 @@ const A_OUT = [0.30 0.20 0.20 0.30;
         @test cod.states[argmax(cod.I)] == :N
     end
 
+    # =====================================================================
+    @testset "Pluto Notebook Execution" begin
+        notebooks_dir = joinpath(@__DIR__, "..", "notebooks")
+        nb_files = filter(f -> endswith(f, ".jl"), readdir(notebooks_dir, join = true))
+        @test length(nb_files) == 6
+        for nb in sort(nb_files)
+            @testset "Notebook: $(basename(nb))" begin
+                @test_nowarn include(nb)
+            end
+        end
+    end
+
 end
+
