@@ -1,0 +1,9 @@
+[deps]
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+HypertextLiteral = "ac1192a8-f4b3-4bfe-ba22-af5b92cd3ab2"
+ImageIO = "82e4d734-157c-48bb-816b-45c225c6df19"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
+OffsetArrays = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
+PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
+Ueauty = "02ec7d09-9c23-427e-9147-b12e6bb36e7e"
